@@ -18,7 +18,9 @@
       <div class="header-actions"><button id="themeBtn" class="theme-btn" type="button" aria-label="Cambiar a modo claro" title="Cambiar tema"><span aria-hidden="true">☀</span><span id="themeLabel">Claro</span></button><div class="countdown"><strong id="countdownN">—</strong><span>días para la meta</span></div></div>
     </header>
     <section class="stats" aria-label="Estadísticas"><article><span>Avance global</span><strong id="globalProgress">0%</strong><div class="progress"><i id="globalBar"></i></div></article><article><span>Tareas</span><strong id="taskCount">0</strong><small id="doneCount">0 completadas</small></article><article class="area-stat"><span>Progreso por área</span><div id="areaProgress"></div></article></section>
+    <section class="workspace-panel" id="workspacePanel" hidden><div><p class="eyebrow">Espacio compartido</p><strong id="workspaceName">Plan Alemania 2028</strong><p>Comparte el código con tu pareja para ver las mismas tareas, trackers y movimientos.</p></div><div class="workspace-actions"><button id="copyWorkspaceBtn" class="btn" type="button">Copiar código</button><label>Unirme con código<input id="joinWorkspaceCode" placeholder="Pega el código UUID"></label><button id="joinWorkspaceBtn" class="btn primary" type="button">Unirme</button></div></section>
     <section class="trackers-section" aria-labelledby="trackersTitle"><div class="section-title"><div><p class="eyebrow">Finanzas y proyecto</p><h2 id="trackersTitle">Mis trackers</h2></div><p>Actualiza los valores cuando haya un movimiento.</p></div><div class="trackers" id="trackers"></div></section>
+    <section class="upcoming-section" aria-labelledby="upcomingTitle"><div class="section-title"><div><p class="eyebrow">Agenda</p><h2 id="upcomingTitle">Próximos vencimientos</h2></div><p>Las siguientes seis tareas con fecha límite.</p></div><div id="upcomingTasks" class="upcoming-tasks"></div></section>
     <section class="controls-card" aria-label="Controles de tareas"><div class="controls-heading"><div><h2>Mi tablero</h2><p>Organiza los próximos pasos y mantén el foco.</p></div><button id="addBtn" class="btn primary">+ Nueva tarea</button></div><div class="controls">
       <input id="search" type="search" placeholder="Buscar tareas o notas…" aria-label="Buscar tareas">
       <select id="areaFilter" aria-label="Filtrar por área"><option value="Todas">Todas las áreas</option></select>
@@ -32,7 +34,7 @@
   </main>
   <dialog id="taskDialog"><form id="taskForm" method="dialog"><div class="dialog-head"><h2 id="dialogTitle">Nueva tarea</h2><button class="icon-btn" value="cancel" aria-label="Cerrar">×</button></div>
     <label>Tarea<input id="fTarea" required maxlength="160" autocomplete="off"></label>
-    <label>Área<select id="fArea"></select></label><label>Estado<select id="fEstado"><option>Sin empezar</option><option>En progreso</option><option>Listo</option></select></label>
+    <label>Área<select id="fArea"></select></label><label>Estado<select id="fEstado"><option>Sin empezar</option><option>En progreso</option><option>Listo</option></select></label><label>Prioridad<select id="fPrioridad"><option>Alta</option><option selected>Media</option><option>Baja</option></select></label>
     <label>Fecha límite<input id="fFecha" type="date"></label><label>Notas<textarea id="fNotas" maxlength="1000"></textarea></label>
     <div class="dialog-actions"><button id="deleteBtn" type="button" class="btn danger" hidden>Eliminar</button><span></span><button class="btn" value="cancel">Cancelar</button><button id="saveBtn" class="btn primary" value="default">Guardar</button></div>
   </form></dialog>
